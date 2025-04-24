@@ -1,5 +1,5 @@
 const config = {
-    apiUrl: 'https://test-12-nsd4.onrender.com/chat',
+    apiUrl: 'https://policybot-b2rp.onrender.com/chat',
     welcomeMessage: 'Welcome to IndexPosition Insurance! I\'m your personal insurance assistant. How can I help you with policies, claims, or coverage questions today?',
     errorMessage: 'Sorry, I\'m having trouble connecting to our services. Please try again shortly or contact our support team for immediate assistance.',
     quickActions: [
