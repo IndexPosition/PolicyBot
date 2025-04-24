@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexPosition Insurance Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>PolicyBot</h1>
+                    <p>Your Personal Insurance Assistant</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="help-button" class="icon-button" title="Get help">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="tooltip">Help</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="chat-container">
+            <div id="chat-messages" class="messages">
+                <!-- Messages will be inserted here by JavaScript -->
+            </div>
+        </main>
+
+        <div class="input-section">
+            <div class="quick-actions">
+                <button class="quick-action-btn" data-prompt="Tell me about your home insurance policies">
+                    <i class="fas fa-home"></i> Home Insurance
+                </button>
+                <button class="quick-action-btn" data-prompt="What auto insurance options do you offer?">
+                    <i class="fas fa-car"></i> Auto Insurance
+                </button>
+                <button class="quick-action-btn" data-prompt="Explain the claims process">
+                    <i class="fas fa-file-alt"></i> Claims
+                </button>
+                <button class="quick-action-btn" data-prompt="What discounts are available?">
+                    <i class="fas fa-percentage"></i> Discounts
+                </button>
+            </div>
+            <form id="chat-form" class="message-input">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="user-input" 
+                        placeholder="Ask about our policies, premiums, or claims..." 
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="button" id="attach-button" class="input-icon" title="Attach files">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button type="submit" id="send-button" class="input-icon send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <template id="loading-template">
+            <div class="message assistant">
+                <div class="message-content loading">
+                    <div class="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <div id="help-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Help Center</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4>How to use this assistant</h4>
+                    <ul>
+                        <li>Ask about specific policies (home, auto, life, etc.)</li>
+                        <li>Inquire about coverage details and limits</li>
+                        <li>Get help with claims or policy changes</li>
+                        <li>Request quotes or compare plans</li>
+                    </ul>
+                    <div class="examples">
+                        <h4>Example questions:</h4>
+                        <p>"What does my home insurance cover?"</p>
+                        <p>"How do I file a claim for my auto insurance?"</p>
+                        <p>"What discounts are available for bundling policies?"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
